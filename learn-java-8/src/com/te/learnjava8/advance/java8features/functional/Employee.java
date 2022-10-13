@@ -1,4 +1,4 @@
-package com.te.learnjava8.advance.collections.set;
+package com.te.learnjava8.advance.java8features.functional;
 
 import java.io.Serializable;
 

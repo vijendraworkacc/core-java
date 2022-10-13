@@ -13,7 +13,7 @@ class SortStudentsOnAge implements Comparator<Student> {
 }
 
 class SortStudentsOnName implements Comparator<Student> {
-	
+
 	@Override
 	public int compare(Student student1, Student student2) {
 		return student1.getsName().hashCode() - student2.getsName().hashCode();
@@ -24,7 +24,7 @@ class SortStudentsOnName implements Comparator<Student> {
 public class LearnFunctionalInterface {
 	public static void main(String[] args) {
 		Student[] students = { new Student(10, "S", 21), new Student(2, "W", 26), new Student(45, "A", 25),
-				new Student(19, "Z", 20), new Student(1, "K", 22), };
+				new Student(19, "Z", 20), new Student(1, "K", 22), null };
 
 		// Lambda expression!
 		Comparator<Student> comparatorOnAge = (student1, student2) -> student2.getsAge() - student1.getsAge();

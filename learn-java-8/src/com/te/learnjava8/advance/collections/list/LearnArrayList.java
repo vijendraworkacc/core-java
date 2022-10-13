@@ -3,6 +3,7 @@ package com.te.learnjava8.advance.collections.list;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
 import java.util.ListIterator;
 
 public class LearnArrayList {
@@ -13,11 +14,15 @@ public class LearnArrayList {
 		arr[2] = 20;
 		arr[3] = 30;
 
+		List<Integer> asList = Arrays.asList(arr);
+
 		ArrayList<Integer> arrayList = new ArrayList();
 		arrayList.add(1);
 		arrayList.add(2);
 		arrayList.add(20);
 		arrayList.add(25);
+		
+		Object[] array = arrayList.toArray();
 
 		// Printing
 		System.out.println(arr.toString());
@@ -49,7 +54,7 @@ public class LearnArrayList {
 			System.out.print(iterator.next() + " ");
 		}
 		System.out.println();
-		
+
 		// ListIterator and cursor
 		ListIterator<Integer> listIterator = arrayList.listIterator();
 		while (listIterator.hasNext()) {
@@ -60,10 +65,10 @@ public class LearnArrayList {
 			System.out.print(listIterator.previous() + " ");
 		}
 		System.out.println();
-		
+
 		// Stream api
 		Arrays.stream(arr).forEach(o -> System.out.println(o + " "));
 		arrayList.stream().forEach(o -> System.out.println(o + " "));
-		
+
 	}
 }
